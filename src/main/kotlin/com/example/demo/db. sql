@@ -1,0 +1,18 @@
+CREATE TABLE `product` (
+  `sku` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(19,2) NOT NULL,
+  `updated_at` datetime NOT NULL
+);
+
+CREATE TABLE `stock` (
+  `id` bigint(20) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `product_sku` varchar(255) DEFAULT NULL,
+  `quantity` double NOT NULL
+);
